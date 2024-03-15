@@ -10,6 +10,11 @@ import javax.swing.JPanel;
 //note: board does not change dynamically 
 //note: board shape and window aesthetics to be set
 //note: unification of colors not done
+/**
+ * @version v1.0
+ * @author ivan
+ * @see BoardScreen
+ */
 public class BoardDrawing extends JPanel {
 
     /**
@@ -64,7 +69,11 @@ public class BoardDrawing extends JPanel {
         }
 
     }
-
+/**
+ * paintComponent Este método sirve para esto.
+ * @param g
+ * @return void
+ */
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;//.create();
@@ -171,7 +180,15 @@ public class BoardDrawing extends JPanel {
         }
 
     }
-
+/**
+ * 
+ * @param g2d
+ * @param pl
+ * @param cell
+ * @param cellWidth
+ * @param cellHeight 
+ * return void
+ */
     private void drawPlayerPosition(Graphics2D g2d, int pl, Rectangle cell, int cellWidth, int cellHeight) {
         //only one player considered here
 
@@ -187,6 +204,11 @@ public class BoardDrawing extends JPanel {
 				player = port.returnEnd();
 		}
 	}
+     */
+    /**
+     * 
+     * @param pnos
+     * @return String
      */
     public String ensurePlayerPosition(int pnos) {
         String message = "";
@@ -207,6 +229,12 @@ public class BoardDrawing extends JPanel {
 	public void setPlayer(int a){
 		player = a;
 	}
+     */
+    /**
+     * 
+     * @param a
+     * @param pnos 
+     * return void
      */
     public void setPlayer(int a, int pnos) {
         bs.players.get(pnos).incPosition(a);
